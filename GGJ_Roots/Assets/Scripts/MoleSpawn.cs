@@ -30,7 +30,7 @@ public class MoleSpawn : MonoBehaviour
         if (enemylife == 0f)
         {
             var r = new Random();
-            enemiesperspawn = UnityEngine.Random.Range(3, 6);
+            enemiesperspawn = UnityEngine.Random.Range(1, 2);
             int gap = r.Next(enemiesperspawn);
             for (int column = 0; column < enemiesperspawn; column++)
             {

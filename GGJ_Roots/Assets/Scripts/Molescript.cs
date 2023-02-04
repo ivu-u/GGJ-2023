@@ -14,7 +14,6 @@ public class Molescript : MonoBehaviour
     void Start()
     {
         Target = GameObject.Find("NerdEmoji");
-        Molespeed = 1f;
     }
 
     // Update is called once per frame
