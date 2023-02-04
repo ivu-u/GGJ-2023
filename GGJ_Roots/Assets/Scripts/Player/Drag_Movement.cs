@@ -37,23 +37,32 @@ public class Drag_Movement : MonoBehaviour
         {
             isStill= false;
         }
+    }
 
-        if(Input.GetMouseButtonDown(0) && isStill) 
+    private void OnMouseDown()
+    {
+        if (isStill)
         {
             startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             startPoint.z = 15;  // ensure that things are visible in the scene
         }
+    }
 
+    private void OnMouseDrag()
+    {
         // render line when mouse clicks n drags
-        if (Input.GetMouseButton(0) && isStill)
+        if (isStill)
         {
             Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             currentPoint.z = 15;
             lt.RenderLine(startPoint, currentPoint);
         }
+    }
 
-        if (Input.GetMouseButtonUp(0) && isStill) 
-        { 
+    private void OnMouseUp() 
+    {
+        if (isStill)
+        {
             endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             endPoint.z = 15;
 
