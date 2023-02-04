@@ -36,7 +36,7 @@ public class MoleSpawn : MonoBehaviour
             {
 
                 // calculate position
-                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-11f, 11f), yloc);
+                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-8.5f, 8.5f), yloc);
                 // create new obstacle
                 GameObject newEnemy = Instantiate(Mole, spawnPosition, Quaternion.identity);
 
