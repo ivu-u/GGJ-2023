@@ -18,6 +18,8 @@ public class Drag_Movement : MonoBehaviour
     Vector3 startPoint;
     Vector3 endPoint;
 
+    bool isStill = true;
+
     private void Start()
     {
         cam = Camera.main;
@@ -26,21 +28,31 @@ public class Drag_Movement : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0)) 
+        // check if player is moving
+        if(rb.velocity == new Vector2(0,0))     // if time adjust this
+        {
+            isStill = true;
+        }
+        else
+        {
+            isStill= false;
+        }
+
+        if(Input.GetMouseButtonDown(0) && isStill) 
         {
             startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             startPoint.z = 15;  // ensure that things are visible in the scene
         }
 
         // render line when mouse clicks n drags
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && isStill)
         {
             Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             currentPoint.z = 15;
             lt.RenderLine(startPoint, currentPoint);
         }
 
-        if (Input.GetMouseButtonUp(0)) 
+        if (Input.GetMouseButtonUp(0) && isStill) 
         { 
             endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
             endPoint.z = 15;
