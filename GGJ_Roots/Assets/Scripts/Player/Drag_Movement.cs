@@ -29,7 +29,7 @@ public class Drag_Movement : MonoBehaviour
     private void Update()
     {
         // check if player is moving
-        if(rb.velocity == new Vector2(0,0))     // if time adjust this
+        if(rb.velocity.magnitude <= 0.5)     // if time adjust this
         {
             isStill = true;
         }
