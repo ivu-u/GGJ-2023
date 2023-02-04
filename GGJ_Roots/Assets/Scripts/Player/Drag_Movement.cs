@@ -11,6 +11,8 @@ public class Drag_Movement : MonoBehaviour
     public Vector2 minPower;
     public Vector2 maxPower;
 
+    LineTrajectory lt;
+
     Camera cam;
     Vector2 force;
     Vector3 startPoint;
@@ -19,23 +21,33 @@ public class Drag_Movement : MonoBehaviour
     private void Start()
     {
         cam = Camera.main;
+        lt = GetComponent<LineTrajectory>();
     }
 
     private void Update()
     {
         if(Input.GetMouseButtonDown(0)) 
         {
-            startPoint.z = 15;  // ensure that things are visible in the scene
             startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+            startPoint.z = 15;  // ensure that things are visible in the scene
         }
 
-        if(Input.GetMouseButtonUp(0)) 
+        // render line when mouse clicks n drags
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 currentPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+            currentPoint.z = 15;
+            lt.RenderLine(startPoint, currentPoint);
+        }
+
+        if (Input.GetMouseButtonUp(0)) 
         { 
-            endPoint.z = 15;
             endPoint = cam.ScreenToWorldPoint(Input.mousePosition);
+            endPoint.z = 15;
 
             force = new Vector2(Mathf.Clamp(startPoint.x - endPoint.x, minPower.x, maxPower.x), Mathf.Clamp(startPoint.y - endPoint.y, minPower.y, maxPower.y));
             rb.AddForce(force * power, ForceMode2D.Impulse);
+            lt.EndLine();
         }
     }
 }
