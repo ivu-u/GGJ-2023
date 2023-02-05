@@ -37,25 +37,28 @@ public class MoleSpawn : MonoBehaviour
         Hardness = Difficult.Difficulty;
         originpos = transform.position;
         yloc = transform.position.y;
-        if (countdown <= 0f)
+        if(Hardness == 3)
         {
-            var r = new Random();
-            enemiesperspawn = UnityEngine.Random.Range(1, 2);
-            int gap = r.Next(enemiesperspawn);
-            for (int column = 0; column < enemiesperspawn; column++)
+            if (countdown <= 0f)
             {
+                var r = new Random();
+                enemiesperspawn = UnityEngine.Random.Range(1, 2);
+                int gap = r.Next(enemiesperspawn);
+                for (int column = 0; column < enemiesperspawn; column++)
+                {
 
-                // calculate position
-                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(targetloc.x -1, targetloc.x +1), yloc);
-                // create new obstacle
-                GameObject newEnemy = Instantiate(Mole, spawnPosition, Quaternion.identity);
+                    // calculate position
+                    Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(targetloc.x - 1, targetloc.x + 1), yloc);
+                    // create new obstacle
+                    GameObject newEnemy = Instantiate(Mole, spawnPosition, Quaternion.identity);
 
 
-                Debug.Log("spawned");
+                    Debug.Log("spawned");
+                }
+                countdown = 3f;
             }
-            countdown = 5f/Hardness;
+            countdown -= Time.deltaTime;
         }
-        countdown -= Time.deltaTime;
     }
     public void Spawn()
     {
