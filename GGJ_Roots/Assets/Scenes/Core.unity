@@ -434,6 +434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CamMovement
       objectReference: {fileID: 0}
+    - target: {fileID: 694075717226687584, guid: dfebaada813a33c40b4dccdbfbabcbd2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 694075717226687586, guid: dfebaada813a33c40b4dccdbfbabcbd2, type: 3}
       propertyPath: m_Enabled
       value: 1
