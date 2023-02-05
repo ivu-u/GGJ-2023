@@ -27,7 +27,7 @@ public class Player : MonoBehaviour     // gradient?
         if (time >= 1f)
         {
             Debug.Log("test");
-            TakeDamage(1);
+            TakeDamage(2);
             time = 0f;
         }
     }
@@ -41,7 +41,7 @@ public class Player : MonoBehaviour     // gradient?
 
     public void GetWater()
     {
-        currentWater += 10;
+        currentWater += 20;
         waterGauge.SetHealth(currentWater);
     }
 
