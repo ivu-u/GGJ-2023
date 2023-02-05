@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
 
-public class RockSpawner : MonoBehaviour
+public class WaterSpawn : MonoBehaviour
 {
 
     public int randObj;
-    public GameObject Rock;
+    public GameObject Water;
     public float x;
     public float y;
     public Vector3 originpos;
@@ -16,24 +16,18 @@ public class RockSpawner : MonoBehaviour
     public float spawntime = 1f;
     public float yloc;
     public float xloc;
-    public GameObject Manager;
-    public DifficultyScript Difficult;
-    public int Hardness;
     public GameObject Camera;
     // Start is called before the first frame update
     void Start()
     {
         originpos = transform.position;
         Spawn();
-        Manager = GameObject.Find("Manager");
-        Difficult = Manager.GetComponent<DifficultyScript>();
         Camera = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Hardness = Difficult.Hard;
         xloc = transform.position.x;
         yloc = transform.position.y;
         Transform Cameraloc = Camera.transform;
@@ -41,18 +35,18 @@ public class RockSpawner : MonoBehaviour
         if (spawntime == 0f)
         {
             var r = new Random();
-            enemiesperspawn = UnityEngine.Random.Range(3 * Hardness, 4 * Hardness);
+            enemiesperspawn = UnityEngine.Random.Range(1, 3);
             int gap = r.Next(enemiesperspawn);
             for (int column = 0; column < enemiesperspawn; column++)
             {
 
                 // calculate position
-                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(xloc, -xloc), UnityEngine.Random.Range(yloc-1f, yloc-11));
+                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(xloc, -xloc), UnityEngine.Random.Range(yloc - 1f, yloc - 11));
                 // create new obstacle
-                GameObject newEnemy = Instantiate(Rock, spawnPosition, Quaternion.identity);
+                GameObject newEnemy = Instantiate(Water, spawnPosition, Quaternion.identity);
 
 
-                Debug.Log("spawned");
+                Debug.Log("spawned water");
             }
             spawntime = 1f;
         }

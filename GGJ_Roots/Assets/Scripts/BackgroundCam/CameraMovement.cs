@@ -53,11 +53,11 @@ public class CameraMovement : MonoBehaviour
                     break;
 
                 case "Mantle":
-                    ms = 2;
+                    ms = 1.5f;
                     break;
 
                 case "Core":
-                    ms = 3;
+                    ms = 2;
                     break;
             }
 

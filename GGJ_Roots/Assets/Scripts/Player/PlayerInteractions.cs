@@ -32,6 +32,7 @@ public class PlayerInteractions : MonoBehaviour
         else if(collider.gameObject.tag == "Water")
         {
             player.GetWater();
+            StartCoroutine(waiter(collider.gameObject));
         }
         else if(collider.gameObject.tag == "Murderbox")
         {

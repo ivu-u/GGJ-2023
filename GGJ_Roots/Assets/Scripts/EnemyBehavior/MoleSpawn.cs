@@ -15,7 +15,7 @@ public class MoleSpawn : MonoBehaviour
     public int enemiesperspawn;
     public float countdown = 5f;
     public float yloc;
-    public GameObject Camera;
+    public GameObject Manager;
     public DifficultyScript Difficult;
     public float Hardness;
     public Vector3 targetloc;
@@ -26,8 +26,8 @@ public class MoleSpawn : MonoBehaviour
         target = GameObject.Find("Player");
         originpos = transform.position;
         Spawn();
-        Camera = GameObject.Find("Main Camera");
-        Difficult = Camera.GetComponent<DifficultyScript>();
+        Manager = GameObject.Find("Manager");
+        Difficult = Manager.GetComponent<DifficultyScript>();
     }
 
     // Update is called once per frame

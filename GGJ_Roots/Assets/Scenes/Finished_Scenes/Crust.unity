@@ -123,6 +123,64 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &7850851
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 269447120}
+    m_Modifications:
+    - target: {fileID: 2713070587638829655, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_Name
+      value: WaterSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.916074
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -1334975916138104044, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
 --- !u!114 &18561450 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8241465210546146716, guid: d15f9117d51253f48a27a50c4dd0d4bb, type: 3}
@@ -425,7 +483,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6824774844088882044, guid: 43905e6d2e4af65468a385667ab1c21f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 43905e6d2e4af65468a385667ab1c21f, type: 3}
 --- !u!1 &350781721 stripped
 GameObject:
@@ -443,6 +502,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da187ca2743af2b46a4d99fa241d1825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &355207045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1232751441463330189, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+  m_PrefabInstance: {fileID: 1762133775}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &355207050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355207045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de97ee204284fc42a9af58e623b4c01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Difficulty: 1
+  Hard: 1
 --- !u!1 &427391100
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +903,7 @@ MonoBehaviour:
   currentloc: {x: 0, y: 0, z: 0}
   winloc: 50
   distance: 0
-  Camera: {fileID: 0}
+  Manager: {fileID: 0}
   Difficult: {fileID: 0}
   level: 1
 --- !u!1 &1163228032
@@ -1116,6 +1194,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+--- !u!1 &1876977527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2713070587638829655, guid: 2b53a08c3bd202b45b77605c11bb4860, type: 3}
+  m_PrefabInstance: {fileID: 7850851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1876977529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876977527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01cc688c4122a8a4288d83fce1770236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randObj: 0
+  Water: {fileID: 6996107254165737939, guid: c645a095ae4db724eaaa8d5888cbf66b, type: 3}
+  x: 0
+  y: 0
+  originpos: {x: 0, y: 0, z: 0}
+  distbtwnen: {x: 0, y: 0, z: 0}
+  enemiesperspawn: 0
+  spawntime: 1
+  yloc: 0
+  xloc: 0
+  Camera: {fileID: 0}
 --- !u!1 &2113717916
 GameObject:
   m_ObjectHideFlags: 0

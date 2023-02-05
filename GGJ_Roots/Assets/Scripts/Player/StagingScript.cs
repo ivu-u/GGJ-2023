@@ -9,15 +9,15 @@ public class StagingScript : MonoBehaviour
     public Vector3 currentloc;
     public float winloc = 50f;
     public float distance;
-    public GameObject Camera;
+    public GameObject Manager;
     public DifficultyScript Difficult;
     public float level = 1f;
     // Start is called before the first frame update
     void Awake()
     {
         startloc = transform.position;
-        Camera = GameObject.Find("Main Camera");
-        Difficult = Camera.GetComponent<DifficultyScript>();
+        Manager = GameObject.Find("Manager");
+        Difficult = Manager.GetComponent<DifficultyScript>();
     }
 
     // Update is called once per frame
@@ -38,6 +38,10 @@ public class StagingScript : MonoBehaviour
             if(level == 3)
             {
                 SceneManager.LoadScene(3);
+            }
+            if(level == 4)
+            {
+                SceneManager.LoadScene(5);
             }
         }
     }
