@@ -34,15 +34,15 @@ public class CameraMovement : MonoBehaviour
             switch(sceneName)
             {
                 case "Crust":
-                    ms = 2;
+                    ms = 1;
                     break;
 
                 case "Mantle":
-                    ms = 3;
+                    ms = 2;
                     break;
 
                 case "Core":
-                    ms = 4;
+                    ms = 3;
                     break;
             }
 

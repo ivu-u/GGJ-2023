@@ -86,7 +86,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6489728874460672656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.156, y: 0.909, z: 0}
+  m_LocalPosition: {x: -0.194, y: 0.616, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -135,7 +135,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Time: 5
+  m_Time: 7
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -143,14 +143,23 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.02234931
-        value: 0.8050304
+        time: 0
+        value: 0.11320835
         inSlope: 0
         outSlope: 0
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.098275565
+        value: 0.59369147
+        inSlope: 2.1123757
+        outSlope: 2.1123757
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.5204698
       - serializedVersion: 3
         time: 0.2905028
         value: 0.9685535
@@ -170,8 +179,8 @@ TrailRenderer:
         inWeight: 1
         outWeight: 0.5747125
       - serializedVersion: 3
-        time: 0.7374302
-        value: 0.4025157
+        time: 0.7206704
+        value: 0.572327
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -228,13 +237,13 @@ TrailRenderer:
       m_Mode: 0
       m_NumColorKeys: 5
       m_NumAlphaKeys: 5
-    numCornerVertices: 0
-    numCapVertices: 5
+    numCornerVertices: 1
+    numCapVertices: 3
     alignment: 0
     textureMode: 2
     shadowBias: 0.5
     generateLightingData: 1
-  m_MinVertexDistance: 0.1
+  m_MinVertexDistance: 1
   m_Autodestruct: 0
   m_Emitting: 1
 --- !u!1001 &5208352238039334095
@@ -490,11 +499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045571, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.366
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045571, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.488
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045571, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -537,6 +546,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9c435559f74fe1f4b82af5d919096852, type: 3}
     - target: {fileID: 5756219697468045572, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756219697468045572, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5756219697468045572, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_SpriteSortPoint
       value: 0
       objectReference: {fileID: 0}
@@ -568,8 +585,34 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 224646929502616731, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
+--- !u!1 &551123137559889354 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5756219697468045573, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
+  m_PrefabInstance: {fileID: 5208352238039334095}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1117476351002686367
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551123137559889354}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a63a8e841dc1f8147ae80a07d0fddf7f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!4 &551123137559889356 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5756219697468045571, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
