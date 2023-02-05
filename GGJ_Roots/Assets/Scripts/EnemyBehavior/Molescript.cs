@@ -13,7 +13,7 @@ public class Molescript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Target = GameObject.Find("NerdEmoji");
+        Target = GameObject.Find("Player");
     }
 
     // Update is called once per frame

@@ -43,7 +43,7 @@ public class RockSpawner : MonoBehaviour
                 // calculate position
                 Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(xloc, -xloc), UnityEngine.Random.Range(yloc, -yloc-1));
                 // create new obstacle
-                GameObject newEnemy = Instantiate(Rock, spawnPosition, Quaternion.identity, Cameraloc);
+                GameObject newEnemy = Instantiate(Rock, spawnPosition, Quaternion.identity);
 
 
                 Debug.Log("spawned");

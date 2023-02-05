@@ -20,13 +20,13 @@ public class MoleSpawn : MonoBehaviour
     {
         originpos = transform.position;
         Spawn();
-        yloc = transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
         originpos = transform.position;
+        yloc = transform.position.y;
         if (countdown <= 0f)
         {
             var r = new Random();
