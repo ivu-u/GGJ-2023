@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5208352236475120466}
   - component: {fileID: 5208352236475120465}
   - component: {fileID: 5208352236475120464}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Roots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2290675214311528572}
   - component: {fileID: 170905429959021128}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Time: 7
+  m_Time: 10
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -563,7 +563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045573, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045582, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_Size.x

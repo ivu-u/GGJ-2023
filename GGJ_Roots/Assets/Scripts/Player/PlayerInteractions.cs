@@ -23,6 +23,7 @@ public class PlayerInteractions : MonoBehaviour
     {
         if(collider.gameObject.tag == "Enemy")
         {
+            Debug.Log("test");
             player.TakeDamage(20);
         }
         else if(collider.gameObject.tag == "Water")
