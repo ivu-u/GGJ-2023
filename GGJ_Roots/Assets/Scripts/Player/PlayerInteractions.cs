@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player1 : MonoBehaviour
+public class PlayerInteractions : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Player player;
+
+    private void Start()
     {
-        
+        player = gameObject.GetComponentInParent<Player>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    private void OnTriggerEnter2D(Collider2D collider)  // lazy coding so implement different damage here
     {
-        
+        if(collider.gameObject.tag == "Enemy")
+        {
+            player.TakeDamage(20);
+        }
     }
 }
