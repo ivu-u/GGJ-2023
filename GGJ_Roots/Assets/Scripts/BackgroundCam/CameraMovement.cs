@@ -24,11 +24,11 @@ public class CameraMovement : MonoBehaviour
                 break;
 
             case "Mantle":
-                // audio
+                FindObjectOfType<AudioManager>().Play("MantleTheme");
                 break;
 
             case "Core":
-                // audio
+                FindObjectOfType<AudioManager>().Play("CoreTheme");
                 break;
         }
     }

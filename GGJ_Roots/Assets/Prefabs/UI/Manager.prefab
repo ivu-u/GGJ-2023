@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1232751441463330191}
   - component: {fileID: 1232751441463330188}
   - component: {fileID: 3892847375686655696}
+  - component: {fileID: 1745827606628368541}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -105,10 +106,32 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: MenuTheme
+    clip: {fileID: 8300000, guid: 7daa6876e6cd3cc4c87872d4a639eb09, type: 3}
+    volume: 0.8
+    loop: 1
+    source: {fileID: 0}
+  - name: CoreTheme
+    clip: {fileID: 8300000, guid: 49b19e907a6767e46afb70571b0e7128, type: 3}
+    volume: 0.8
+    loop: 1
+    source: {fileID: 0}
+  - name: MenuTheme
     clip: {fileID: 8300000, guid: 545df1ee801915246bb02a576a7614ca, type: 3}
     volume: 0.8
     loop: 1
     source: {fileID: 0}
+--- !u!114 &1745827606628368541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232751441463330189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3879005c5f427064e9dbfeee629e9e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1232751441547696160
 GameObject:
   m_ObjectHideFlags: 0
