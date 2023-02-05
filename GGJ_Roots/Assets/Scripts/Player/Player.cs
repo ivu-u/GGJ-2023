@@ -23,4 +23,10 @@ public class Player : MonoBehaviour     // gradient?
         waterGauge.SetHealth(currentWater);
     }
 
+    public void GetWater()
+    {
+        currentWater -= 10;
+        waterGauge.SetHealth(currentWater);
+    }
+
 }
