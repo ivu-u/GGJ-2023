@@ -13,24 +13,30 @@ public class WormSpawn : MonoBehaviour
     public Vector3 originpos;
     public Vector3 distbtwnen;
     public int enemiesperspawn;
-    public float countdown = 0f;
+    public float countdown = 5f;
     public float yloc;
     public Vector3 targetloc;
     GameObject target;
     GameObject[] nospawn;
     Vector3 nospawnloc;
     public int xloc;
+    public GameObject Camera;
+    public DifficultyScript Difficult;
+    public float Hardness;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.Find("Player");
         originpos = transform.position;
         Spawn();
+        Camera = GameObject.Find("Main Camera");
+        Difficult = Camera.GetComponent<DifficultyScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Hardness = Difficult.Difficulty;
         yloc = transform.position.y;
         nospawn = GameObject.FindGameObjectsWithTag("Rock");
         foreach(GameObject Rock in nospawn)
@@ -72,7 +78,7 @@ public class WormSpawn : MonoBehaviour
                         Debug.Log("spawned");
                     }
                 }
-                countdown = 5f;
+                countdown = 5f/Hardness;
             }
         }
         countdown -= Time.deltaTime;

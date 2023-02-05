@@ -13,18 +13,24 @@ public class MoleSpawn : MonoBehaviour
     public Vector3 originpos;
     public Vector3 distbtwnen;
     public int enemiesperspawn;
-    public float countdown = 0f;
+    public float countdown = 5f;
     public float yloc;
+    public GameObject Camera;
+    public DifficultyScript Difficult;
+    public float Hardness;
     // Start is called before the first frame update
     void Start()
     {
         originpos = transform.position;
         Spawn();
+        Camera = GameObject.Find("Main Camera");
+        Difficult = Camera.GetComponent<DifficultyScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Hardness = Difficult.Difficulty;
         originpos = transform.position;
         yloc = transform.position.y;
         if (countdown <= 0f)
@@ -43,7 +49,7 @@ public class MoleSpawn : MonoBehaviour
 
                 Debug.Log("spawned");
             }
-            countdown = 5f;
+            countdown = 5f/Hardness;
         }
         countdown -= Time.deltaTime;
     }
