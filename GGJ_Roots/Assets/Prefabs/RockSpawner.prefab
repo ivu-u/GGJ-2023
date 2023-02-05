@@ -44,3 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da187ca2743af2b46a4d99fa241d1825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randObj: 0
+  Rock: {fileID: 5091660946191986002, guid: b69484a9e5a608942b78d60d831a1ac9, type: 3}
+  x: 0
+  y: 0
+  originpos: {x: 0, y: 0, z: 0}
+  distbtwnen: {x: 0, y: 0, z: 0}
+  enemiesperspawn: 0
+  spawntime: 0
+  yloc: 0
+  xloc: 0
+  Camera: {fileID: 0}

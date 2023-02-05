@@ -23,15 +23,15 @@ public class WormSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.Find("NerdEmoji");
+        target = GameObject.Find("Player");
         originpos = transform.position;
         Spawn();
-        yloc = transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
+        yloc = transform.position.y;
         nospawn = GameObject.FindGameObjectsWithTag("Rock");
         foreach(GameObject Rock in nospawn)
         {
