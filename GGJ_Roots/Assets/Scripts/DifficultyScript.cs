@@ -23,7 +23,7 @@ public class DifficultyScript : MonoBehaviour
             Difficulty = 1f;
             Hard = 1;
         }
-        else if(scene.name == "Mantle")
+        else if(scene.name == "New Mantle")
         {
             Difficulty = 2f;
             Hard = 2;
