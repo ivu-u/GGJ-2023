@@ -25,5 +25,9 @@ public class PlayerInteractions : MonoBehaviour
         {
             player.TakeDamage(20);
         }
+        else if(collider.gameObject.tag == "Water")
+        {
+            player.GetWater();
+        }
     }
 }
