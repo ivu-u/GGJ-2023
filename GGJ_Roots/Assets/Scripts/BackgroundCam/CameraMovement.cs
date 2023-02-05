@@ -20,21 +20,21 @@ public class CameraMovement : MonoBehaviour
         switch (sceneName)
         {
             case "Crust":
-                FindObjectOfType<AudioManager>().Stop();
+                //FindObjectOfType<AudioManager>().Stop();
                 FindObjectOfType<AudioManager>().Play("CrustTheme");
                 break;
 
-            case "Mantle":
-                FindObjectOfType<AudioManager>().Stop();
+            case "New Mantle":
+                //FindObjectOfType<AudioManager>().Stop();
                 FindObjectOfType<AudioManager>().Play("MantleTheme");
                 break;
 
             case "Core":
-                FindObjectOfType<AudioManager>().Stop();
+                //FindObjectOfType<AudioManager>().Stop();
                 FindObjectOfType<AudioManager>().Play("CoreTheme");
                 break;
             default:
-                FindObjectOfType<AudioManager>().Stop();
+                //FindObjectOfType<AudioManager>().Stop();
                 break;
         }
     }
