@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1232751441463330188}
   - component: {fileID: 3892847375686655696}
   - component: {fileID: 1745827606628368541}
+  - component: {fileID: 9006685417001679024}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -102,7 +103,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CrustTheme
     clip: {fileID: 8300000, guid: f0dccd57cc4b05540aa088b4abd3a151, type: 3}
-    volume: 0.1
+    volume: 0.8
     loop: 1
     source: {fileID: 0}
   - name: MenuTheme
@@ -120,6 +121,16 @@ MonoBehaviour:
     volume: 0.8
     loop: 1
     source: {fileID: 0}
+  - name: SquirrelTheme
+    clip: {fileID: 8300000, guid: a74b8a4990b079242bd8de737140c3a3, type: 3}
+    volume: 0.8
+    loop: 1
+    source: {fileID: 0}
+  - name: MoleThem
+    clip: {fileID: 8300000, guid: 76e77726766f1e448a054be08bf387d5, type: 3}
+    volume: 0.8
+    loop: 1
+    source: {fileID: 0}
 --- !u!114 &1745827606628368541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +141,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3879005c5f427064e9dbfeee629e9e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9006685417001679024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232751441463330189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3c907421541f54da786a8e83982be7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1232751441547696160
