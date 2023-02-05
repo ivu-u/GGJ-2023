@@ -20,7 +20,7 @@ public class WormSpawn : MonoBehaviour
     GameObject[] nospawn;
     Vector3 nospawnloc;
     public int xloc;
-    public GameObject Camera;
+    public GameObject Manager;
     public DifficultyScript Difficult;
     public float Hardness;
     // Start is called before the first frame update
@@ -29,8 +29,8 @@ public class WormSpawn : MonoBehaviour
         target = GameObject.Find("Player");
         originpos = transform.position;
         Spawn();
-        Camera = GameObject.Find("Main Camera");
-        Difficult = Camera.GetComponent<DifficultyScript>();
+        Manager = GameObject.Find("Manager");
+        Difficult = Manager.GetComponent<DifficultyScript>();
     }
 
     // Update is called once per frame

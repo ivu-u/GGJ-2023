@@ -15,12 +15,12 @@ public class EndingsManager : MonoBehaviour
         // bad ending
         if (player.currentWater <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+            SceneManager.LoadScene("BadEnding");
         }
         // good ending 
         /*if ()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(5);
         }*/
     }
 }

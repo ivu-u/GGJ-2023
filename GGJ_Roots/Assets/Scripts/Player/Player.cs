@@ -8,12 +8,15 @@ public class Player : MonoBehaviour     // gradient?
     public int currentWater;
     
     public WaterGauge waterGauge;
+    public GameObject WaterMeter;
 
     private float time = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        WaterMeter = GameObject.Find("WaterGauge");
+        waterGauge = WaterMeter.GetComponent<WaterGauge>();
         currentWater = maxWater;
         waterGauge.SetMaxHealth(maxWater);
     }
@@ -38,7 +41,7 @@ public class Player : MonoBehaviour     // gradient?
 
     public void GetWater()
     {
-        currentWater -= 10;
+        currentWater += 10;
         waterGauge.SetHealth(currentWater);
     }
 

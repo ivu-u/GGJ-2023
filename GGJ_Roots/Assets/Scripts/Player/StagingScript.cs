@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StagingScript : MonoBehaviour
 {
@@ -8,14 +9,15 @@ public class StagingScript : MonoBehaviour
     public Vector3 currentloc;
     public float winloc = 50f;
     public float distance;
-    public GameObject Camera;
+    public GameObject Manager;
     public DifficultyScript Difficult;
+    public float level = 1f;
     // Start is called before the first frame update
     void Awake()
     {
         startloc = transform.position;
-        Camera = GameObject.Find("Main Camera");
-        Difficult = Camera.GetComponent<DifficultyScript>();
+        Manager = GameObject.Find("Manager");
+        Difficult = Manager.GetComponent<DifficultyScript>();
     }
 
     // Update is called once per frame
@@ -23,11 +25,13 @@ public class StagingScript : MonoBehaviour
     {
         currentloc = transform.position;
         distance = startloc.y - currentloc.y;
-        if(distance == winloc)
+        if(distance >= winloc)
         {
             Difficult.Difficulty += 1f;
             Difficult.Hard += 1;
+            level += 1;
             Debug.Log("Level change");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

@@ -21,12 +21,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Finished_Scenes/Crust.unity
     guid: f6c73f26db764b944b246bb47f1791c4
   - enabled: 1
-    path: Assets/Scenes/Finished_Scenes/Mantle.unity
-    guid: 1935c832844363241a32a68f5674670e
+    path: Assets/Scenes/Finished_Scenes/New Mantle.unity
+    guid: deed4c6631bd1954b9d1aacdf8a39e66
   - enabled: 1
-    path: Assets/Scenes/BadEnding.unity
-    guid: b9d49db9e28ae0e4db29ba44a10a96d9
+    path: Assets/Scenes/Core.unity
+    guid: 65b686e8e164e504f8b81fe64f3469a4
   - enabled: 1
     path: Assets/Scenes/GoodEnding.unity
     guid: df7ad870aae834b41952b5f5f676e8bb
+  - enabled: 1
+    path: Assets/Scenes/BadEnding.unity
+    guid: b9d49db9e28ae0e4db29ba44a10a96d9
+  - enabled: 0
+    path: Assets/Scenes/Finished_Scenes/Mantle.unity
+    guid: 1935c832844363241a32a68f5674670e
   m_configObjects: {}

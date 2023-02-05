@@ -7,6 +7,11 @@ public class WaterGauge : MonoBehaviour
 {
     public Slider slider;
 
+    public void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void SetMaxHealth(int health)
     {
         slider.maxValue = health;

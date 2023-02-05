@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Rock
   - Enemy
+  - Murderbox
+  - Water
   layers:
   - Default
   - TransparentFX
@@ -15,7 +17,7 @@ TagManager:
   - UI
   - background
   - Player2
-  - 
+  - Murderbox
   - 
   - 
   - 
