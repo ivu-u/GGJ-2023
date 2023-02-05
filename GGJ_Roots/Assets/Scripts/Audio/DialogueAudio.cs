@@ -14,11 +14,11 @@ public class DialogueAudio : MonoBehaviour
         switch (sceneName)
         {
             case "IntroDialogue":
-                FindObjectOfType<AudioManager>().Play("SquirrelTheme");
+                this.GetComponent<AudioSource>().Play(); ;
                 break;
 
             case "MantleDialogue":
-                FindObjectOfType<AudioManager>().Play("MoleTheme");
+                
                 break;
         }
     }
