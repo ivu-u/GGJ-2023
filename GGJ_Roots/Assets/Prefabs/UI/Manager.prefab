@@ -99,6 +99,16 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: CrustTheme
+    clip: {fileID: 8300000, guid: f0dccd57cc4b05540aa088b4abd3a151, type: 3}
+    volume: 0.1
+    loop: 1
+    source: {fileID: 0}
+  - name: MenuTheme
+    clip: {fileID: 8300000, guid: 545df1ee801915246bb02a576a7614ca, type: 3}
+    volume: 0.8
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &1232751441547696160
 GameObject:
   m_ObjectHideFlags: 0

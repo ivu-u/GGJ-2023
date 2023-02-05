@@ -25,11 +25,19 @@ public class PlayerInteractions : MonoBehaviour
         {
             player.TakeDamage(20);
             FindObjectOfType<AudioManager>().Play("RootHit");
-            Destroy(collider.gameObject);
+            collider.GetComponent<ParticleSystem>().Play();
+
+            StartCoroutine(waiter(collider.gameObject));
         }
         else if(collider.gameObject.tag == "Water")
         {
             player.GetWater();
         }
+    }
+
+    IEnumerator waiter(GameObject c)
+    {
+        yield return new WaitForSeconds((float).2);
+        Destroy(c);
     }
 }
