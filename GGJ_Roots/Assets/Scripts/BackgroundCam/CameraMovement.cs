@@ -1,27 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float ms = 6;
+    public float ms = 0;
 
-    private bool didPress = false;
+    private bool didStart = false;
 
     public Rigidbody2D rb;
+
+    private string sceneName;
+
+    private void Awake()
+    {
+        sceneName = SceneManager.GetActiveScene().name;
+    }
+
 
     private void FixedUpdate()
     {
         if(rb.velocity.magnitude > 0) 
         { 
-            didPress= true;
+            didStart= true;
         }
     }
 
     private void Update()
     {
-        if(didPress) 
+        if(didStart) 
         {
+            switch(sceneName)
+            {
+                case "Crust":
+                    ms = 1;
+                    break;
+
+                case "Mantle":
+                    ms = 2;
+                    break;
+
+                case "Core":
+                    ms = 3;
+                    break;
+            }
+
             transform.Translate(Vector3.down * ms * Time.deltaTime);
         }
     }
