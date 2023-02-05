@@ -16,7 +16,7 @@ public class StagingScript : MonoBehaviour
     void Awake()
     {
         startloc = transform.position;
-        Manager = GameObject.Find("DifficultyManager");
+        Manager = GameObject.Find("Manager");
         Difficult = Manager.GetComponent<DifficultyScript>();
     }
 

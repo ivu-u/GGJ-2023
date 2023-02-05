@@ -23,17 +23,16 @@ public class WormSpawn : MonoBehaviour
     public GameObject Manager;
     public DifficultyScript Difficult;
     public float Hardness;
-    Vector3 InverseRot;
-    Quaternion FlippedRot;
+    Quaternion InverseRot;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.Find("Player");
         originpos = transform.position;
         Spawn();
-        Manager = GameObject.Find("DifficultyManager");
+        Manager = GameObject.Find("Manager");
         Difficult = Manager.GetComponent<DifficultyScript>();
-        InverseRot = new Vector3(180, 0, 180);
+        InverseRot = new Quaternion(180, 0, 180, 1);
     }
 
     // Update is called once per frame
@@ -79,8 +78,7 @@ public class WormSpawn : MonoBehaviour
                         }
                         if (xloc == -1)
                         {
-                            FlippedRot.eulerAngles = InverseRot;
-                            GameObject newEnemy = Instantiate(Worm, spawnPosition, FlippedRot);
+                            GameObject newEnemy = Instantiate(Worm, spawnPosition, InverseRot);
                             Debug.Log("spawned");
                         }
                     }
