@@ -13,7 +13,7 @@ public class MoleSpawn : MonoBehaviour
     public Vector3 originpos;
     public Vector3 distbtwnen;
     public int enemiesperspawn;
-    public float enemylife = 0f;
+    public float countdown = 0f;
     public float yloc;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class MoleSpawn : MonoBehaviour
     void Update()
     {
         originpos = transform.position;
-        if (enemylife == 0f)
+        if (countdown <= 0f)
         {
             var r = new Random();
             enemiesperspawn = UnityEngine.Random.Range(1, 2);
@@ -43,8 +43,9 @@ public class MoleSpawn : MonoBehaviour
 
                 Debug.Log("spawned");
             }
-            enemylife = 1;
+            countdown = 10f;
         }
+        countdown -= Time.deltaTime;
     }
     public void Spawn()
     {
