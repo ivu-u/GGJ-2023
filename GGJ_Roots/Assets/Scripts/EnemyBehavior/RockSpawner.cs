@@ -25,7 +25,7 @@ public class RockSpawner : MonoBehaviour
     {
         originpos = transform.position;
         Spawn();
-        Manager = GameObject.Find("Manager");
+        Manager = GameObject.Find("DifficultyManager");
         Difficult = Manager.GetComponent<DifficultyScript>();
         Camera = GameObject.Find("Main Camera");
     }

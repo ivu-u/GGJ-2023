@@ -26,7 +26,7 @@ public class MoleSpawn : MonoBehaviour
         target = GameObject.Find("Player");
         originpos = transform.position;
         Spawn();
-        Manager = GameObject.Find("Manager");
+        Manager = GameObject.Find("DifficultyManager");
         Difficult = Manager.GetComponent<DifficultyScript>();
     }
 
