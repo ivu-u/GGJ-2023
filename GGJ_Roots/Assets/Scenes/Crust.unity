@@ -145,6 +145,14 @@ PrefabInstance:
       propertyPath: m_AngularDrag
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1117476351002686367, guid: 21b2ee8795b3c6b47a6403415194aa93, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1117476351002686367, guid: 21b2ee8795b3c6b47a6403415194aa93, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5208352236475120465, guid: 21b2ee8795b3c6b47a6403415194aa93, type: 3}
       propertyPath: waterGauge
       value: 
@@ -155,11 +163,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5208352236475120466, guid: 21b2ee8795b3c6b47a6403415194aa93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01
+      value: 1.63
       objectReference: {fileID: 0}
     - target: {fileID: 5208352236475120466, guid: 21b2ee8795b3c6b47a6403415194aa93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.63
+      value: 3.55
       objectReference: {fileID: 0}
     - target: {fileID: 5208352236475120466, guid: 21b2ee8795b3c6b47a6403415194aa93, type: 3}
       propertyPath: m_LocalPosition.z
