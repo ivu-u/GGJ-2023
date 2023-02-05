@@ -9,11 +9,24 @@ public class Player : MonoBehaviour     // gradient?
     
     public WaterGauge waterGauge;
 
+    private float time = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
         currentWater = maxWater;
         waterGauge.SetMaxHealth(maxWater);
+    }
+
+    private void Update()
+    {
+        time += Time.deltaTime;
+        if (time >= 1f)
+        {
+            Debug.Log("test");
+            TakeDamage(1);
+            time = 0f;
+        }
     }
 
     public void TakeDamage(int damage)

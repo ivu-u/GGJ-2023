@@ -10,6 +10,7 @@ public class CameraControl : MonoBehaviour
 
     public Transform bckg1;
     public Transform bckg2;
+    public Transform bckg_first;
 
     private float size;
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5208352236475120466}
   - component: {fileID: 5208352236475120465}
   - component: {fileID: 5208352236475120464}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Roots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5208352236475120467}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7401686, y: -0.37688607, z: 0.46942765}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2290675214311528572}
   - component: {fileID: 170905429959021128}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,10 +132,10 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1557674325
+  m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Time: 7
+  m_Time: 10
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -499,11 +499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045571, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.366
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045571, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.488
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045571, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -563,7 +563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045573, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5756219697468045582, guid: b2e35e80b9409754fa5cf98cbe94eb3b, type: 3}
       propertyPath: m_Size.x
