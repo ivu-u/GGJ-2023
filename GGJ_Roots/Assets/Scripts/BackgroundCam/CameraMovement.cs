@@ -8,9 +8,11 @@ public class CameraMovement : MonoBehaviour
 
     private bool didPress = false;
 
+    public Rigidbody2D rb;
+
     private void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.DownArrow)) 
+        if(rb.velocity.magnitude > 0) 
         { 
             didPress= true;
         }
