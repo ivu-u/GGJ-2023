@@ -17,17 +17,21 @@ public class RockSpawner : MonoBehaviour
     public float yloc;
     public float xloc;
     public GameObject Camera;
+    public DifficultyScript Difficult;
+    public int Hardness;
     // Start is called before the first frame update
     void Start()
     {
         originpos = transform.position;
         Spawn();
         Camera = GameObject.Find("Main Camera");
+        Difficult = Camera.GetComponent<DifficultyScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Hardness = Difficult.Hard;
         xloc = transform.position.x;
         yloc = transform.position.y;
         Transform Cameraloc = Camera.transform;
@@ -35,7 +39,7 @@ public class RockSpawner : MonoBehaviour
         if (spawntime == 0f)
         {
             var r = new Random();
-            enemiesperspawn = UnityEngine.Random.Range(6, 10);
+            enemiesperspawn = UnityEngine.Random.Range(3 * Hardness, 4 * Hardness);
             int gap = r.Next(enemiesperspawn);
             for (int column = 0; column < enemiesperspawn; column++)
             {
