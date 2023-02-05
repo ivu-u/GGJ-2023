@@ -11,7 +11,13 @@ public class PlayerInteractions : MonoBehaviour
         player = gameObject.GetComponentInParent<Player>();
     }
 
+    //private void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.Escape)) 
+    //    { 
 
+    //    }
+    //}
 
     private void OnTriggerEnter2D(Collider2D collider)  // lazy coding so implement different damage here
     {

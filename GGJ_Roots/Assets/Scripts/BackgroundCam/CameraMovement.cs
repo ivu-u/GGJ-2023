@@ -10,11 +10,6 @@ public class CameraMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(Input.GetKey(KeyCode.UpArrow))
-        {
-            transform.Translate(Vector3.up * ms * Time.deltaTime);
-        }
-
         if(Input.GetKey(KeyCode.DownArrow)) 
         { 
             didPress= true;

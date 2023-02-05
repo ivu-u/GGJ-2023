@@ -16,15 +16,6 @@ public class Player : MonoBehaviour     // gradient?
         waterGauge.SetMaxHealth(maxWater);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            TakeDamage(20);
-        }
-    }
-
     public void TakeDamage(int damage)
     {
         currentWater -= damage;
