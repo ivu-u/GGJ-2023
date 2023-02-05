@@ -18,9 +18,12 @@ public class MoleSpawn : MonoBehaviour
     public GameObject Camera;
     public DifficultyScript Difficult;
     public float Hardness;
+    public Vector3 targetloc;
+    GameObject target;
     // Start is called before the first frame update
     void Start()
     {
+        target = GameObject.Find("Player");
         originpos = transform.position;
         Spawn();
         Camera = GameObject.Find("Main Camera");
@@ -30,6 +33,7 @@ public class MoleSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        targetloc = target.transform.position;
         Hardness = Difficult.Difficulty;
         originpos = transform.position;
         yloc = transform.position.y;
@@ -42,7 +46,7 @@ public class MoleSpawn : MonoBehaviour
             {
 
                 // calculate position
-                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(-8.5f, 8.5f), yloc);
+                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(targetloc.x -1, targetloc.x +1), yloc);
                 // create new obstacle
                 GameObject newEnemy = Instantiate(Mole, spawnPosition, Quaternion.identity);
 

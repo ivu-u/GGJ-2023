@@ -33,6 +33,10 @@ public class PlayerInteractions : MonoBehaviour
         {
             player.GetWater();
         }
+        else if(collider.gameObject.tag == "Murderbox")
+        {
+            player.TakeDamage(150);
+        }
     }
 
     IEnumerator waiter(GameObject c)
