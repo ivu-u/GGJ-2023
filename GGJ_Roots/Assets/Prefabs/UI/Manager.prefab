@@ -103,7 +103,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CrustTheme
     clip: {fileID: 8300000, guid: f0dccd57cc4b05540aa088b4abd3a151, type: 3}
-    volume: 0.1
+    volume: 0.8
     loop: 1
     source: {fileID: 0}
   - name: MenuTheme
