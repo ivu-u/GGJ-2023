@@ -106,8 +106,8 @@ MonoBehaviour:
     volume: 0.8
     loop: 1
     source: {fileID: 0}
-  - name: MenuTheme
-    clip: {fileID: 8300000, guid: 545df1ee801915246bb02a576a7614ca, type: 3}
+  - name: MantleTheme
+    clip: {fileID: 8300000, guid: 7daa6876e6cd3cc4c87872d4a639eb09, type: 3}
     volume: 0.8
     loop: 1
     source: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
     volume: 0.8
     loop: 1
     source: {fileID: 0}
-  - name: SquirrelTheme
+  - name: something
     clip: {fileID: 8300000, guid: a74b8a4990b079242bd8de737140c3a3, type: 3}
     volume: 0.8
     loop: 1
