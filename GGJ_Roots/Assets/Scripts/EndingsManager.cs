@@ -13,7 +13,7 @@ public class EndingsManager : MonoBehaviour
     void Update()
     {
         // bad ending
-        if (player.maxWater < 0)
+        if (player.currentWater <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
