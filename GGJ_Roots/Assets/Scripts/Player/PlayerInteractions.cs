@@ -23,8 +23,9 @@ public class PlayerInteractions : MonoBehaviour
     {
         if(collider.gameObject.tag == "Enemy")
         {
-            Debug.Log("test");
             player.TakeDamage(20);
+            FindObjectOfType<AudioManager>().Play("RootHit");
+            Destroy(collider.gameObject);
         }
         else if(collider.gameObject.tag == "Water")
         {

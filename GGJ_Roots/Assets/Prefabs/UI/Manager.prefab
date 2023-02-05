@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1232751441463330191}
   - component: {fileID: 1232751441463330188}
+  - component: {fileID: 3892847375686655696}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -70,6 +71,34 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3892847375686655696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232751441463330189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a69d15c6b8caf1c4c8fb41faa125f38d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: RootHit
+    clip: {fileID: 8300000, guid: a91b013bb339a3f49967c1dc3789ad2e, type: 3}
+    volume: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonHover
+    clip: {fileID: 8300000, guid: 3b895712a309a7649b49b5d30980d83c, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonPress
+    clip: {fileID: 8300000, guid: 2b46c9a2c239d694f8edd42d0e6be6b9, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &1232751441547696160
 GameObject:
   m_ObjectHideFlags: 0
