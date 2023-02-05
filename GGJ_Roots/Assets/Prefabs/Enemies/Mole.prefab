@@ -102,7 +102,8 @@ MonoBehaviour:
   targetloc: {x: 0, y: 0, z: 0}
   director: {x: 0, y: 0, z: 0}
   rotator: {x: 0, y: 0, z: 0, w: 0}
-  Rotatespeed: 1
+  Rotatespeed: 3
+  lifespan: 20
 --- !u!61 &3537359020094174632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -113,7 +114,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

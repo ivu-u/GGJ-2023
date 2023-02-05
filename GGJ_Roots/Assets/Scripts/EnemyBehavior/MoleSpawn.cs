@@ -43,7 +43,7 @@ public class MoleSpawn : MonoBehaviour
 
                 Debug.Log("spawned");
             }
-            countdown = 10f;
+            countdown = 5f;
         }
         countdown -= Time.deltaTime;
     }
