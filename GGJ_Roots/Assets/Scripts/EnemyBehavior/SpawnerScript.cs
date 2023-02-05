@@ -5,10 +5,12 @@ using UnityEngine;
 public class SpawnerScript : MonoBehaviour
 {
     public RockSpawner Rocking;
+    public GameObject RockSpawn;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        RockSpawn = GameObject.Find("RockSpawner");
+        Rocking = RockSpawn.GetComponent<RockSpawner>();
     }
 
     // Update is called once per frame
@@ -16,8 +18,9 @@ public class SpawnerScript : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Rocking.spawntime = 0f;
+        Debug.Log("Triggered");
     }
 }

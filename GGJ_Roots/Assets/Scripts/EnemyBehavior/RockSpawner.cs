@@ -13,7 +13,7 @@ public class RockSpawner : MonoBehaviour
     public Vector3 originpos;
     public Vector3 distbtwnen;
     public int enemiesperspawn;
-    public float spawntime = 0f;
+    public float spawntime = 1f;
     public float yloc;
     public float xloc;
     public GameObject Camera;
@@ -22,26 +22,26 @@ public class RockSpawner : MonoBehaviour
     {
         originpos = transform.position;
         Spawn();
-        xloc = transform.position.x;
-        yloc = transform.position.y;
         Camera = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
     void Update()
     {
+        xloc = transform.position.x;
+        yloc = transform.position.y;
         Transform Cameraloc = Camera.transform;
         originpos = transform.position;
         if (spawntime == 0f)
         {
             var r = new Random();
-            enemiesperspawn = UnityEngine.Random.Range(3, 6);
+            enemiesperspawn = UnityEngine.Random.Range(6, 10);
             int gap = r.Next(enemiesperspawn);
             for (int column = 0; column < enemiesperspawn; column++)
             {
 
                 // calculate position
-                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(xloc, -xloc), UnityEngine.Random.Range(yloc, -yloc-1));
+                Vector3 spawnPosition = new Vector3(UnityEngine.Random.Range(xloc, -xloc), UnityEngine.Random.Range(yloc-1f, yloc-11));
                 // create new obstacle
                 GameObject newEnemy = Instantiate(Rock, spawnPosition, Quaternion.identity);
 

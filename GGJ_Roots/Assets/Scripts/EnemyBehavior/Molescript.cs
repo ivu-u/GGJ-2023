@@ -10,6 +10,7 @@ public class Molescript : MonoBehaviour
     public Vector3 director;
     public Quaternion rotator;
     public float Rotatespeed;
+    public float lifespan = 20f;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,11 @@ public class Molescript : MonoBehaviour
         else
         {
             transform.Translate(0f, Molespeed * Time.deltaTime, 0f);
+        }
+        lifespan -= Time.deltaTime;
+        if (lifespan <= 0f)
+        {
+            Destroy(gameObject);
         }
     }
 }
