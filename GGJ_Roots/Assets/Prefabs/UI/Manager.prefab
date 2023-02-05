@@ -93,7 +93,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: ButtonHover
     clip: {fileID: 8300000, guid: 3b895712a309a7649b49b5d30980d83c, type: 3}
-    volume: 1
+    volume: 0.5
     loop: 0
     source: {fileID: 0}
   - name: ButtonPress

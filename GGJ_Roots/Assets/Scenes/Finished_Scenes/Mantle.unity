@@ -748,6 +748,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3892847375686655696, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+      propertyPath: sounds.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892847375686655696, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7daa6876e6cd3cc4c87872d4a639eb09, type: 3}
+    - target: {fileID: 3892847375686655696, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+      propertyPath: sounds.Array.data[6].name
+      value: MantleTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892847375686655696, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+      propertyPath: sounds.Array.data[7].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 545df1ee801915246bb02a576a7614ca, type: 3}
+    - target: {fileID: 3892847375686655696, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+      propertyPath: sounds.Array.data[7].loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892847375686655696, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+      propertyPath: sounds.Array.data[7].name
+      value: MenuTheme
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892847375686655696, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+      propertyPath: sounds.Array.data[7].volume
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
 --- !u!1 &2071916441 stripped
