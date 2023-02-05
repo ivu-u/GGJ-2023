@@ -6,7 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-	public void LoadScene(int index)
+    private void Awake()
+    {
+		if(SceneManager.GetActiveScene().name == "TitleScreen")
+		{
+            FindObjectOfType<AudioManager>().Play("MenuTheme");
+        }
+    }
+
+    public void LoadScene(int index)
 	{
 		// load the next scene into scene manager
 		SceneManager.LoadScene(index);

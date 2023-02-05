@@ -16,6 +16,21 @@ public class CameraMovement : MonoBehaviour
     private void Awake()
     {
         sceneName = SceneManager.GetActiveScene().name;
+
+        switch (sceneName)
+        {
+            case "Crust":
+                FindObjectOfType<AudioManager>().Play("CrustTheme");
+                break;
+
+            case "Mantle":
+                FindObjectOfType<AudioManager>().Play("MantleTheme");
+                break;
+
+            case "Core":
+                FindObjectOfType<AudioManager>().Play("CoreTheme");
+                break;
+        }
     }
 
 
