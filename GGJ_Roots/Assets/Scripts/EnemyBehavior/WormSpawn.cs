@@ -23,6 +23,7 @@ public class WormSpawn : MonoBehaviour
     public GameObject Manager;
     public DifficultyScript Difficult;
     public float Hardness;
+    Quaternion InverseRot;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class WormSpawn : MonoBehaviour
         Spawn();
         Manager = GameObject.Find("Manager");
         Difficult = Manager.GetComponent<DifficultyScript>();
+        InverseRot = new Quaternion(180, 0, 180, 1);
     }
 
     // Update is called once per frame
@@ -45,43 +47,46 @@ public class WormSpawn : MonoBehaviour
         }
         originpos = transform.position;
         targetloc = target.transform.position;
-        if (countdown <= 0f)
+        if(Hardness >= 2)
         {
-            var r = new Random();
-            enemiesperspawn = UnityEngine.Random.Range(1,2);
-            int gap = r.Next(enemiesperspawn);
-            for (int column = 0; column < enemiesperspawn; column++)
+            if (countdown <= 0f)
             {
+                var r = new Random();
+                enemiesperspawn = UnityEngine.Random.Range(1, 2);
+                int gap = r.Next(enemiesperspawn);
+                for (int column = 0; column < enemiesperspawn; column++)
+                {
 
-                // calculate position
-                xloc = UnityEngine.Random.Range(1, 2);
-                if (xloc == 2)
-                {
-                    xloc = -1;
-                }
-                Vector3 spawnPosition = new Vector3(transform.position.x * xloc, UnityEngine.Random.Range(yloc+.5f, targetloc.y-.5f));
-                if (spawnPosition.y == nospawnloc.y)
-                {
-                    spawnPosition = new Vector3(transform.position.x, UnityEngine.Random.Range(yloc + .5f, targetloc.y - .5f));
-                }
-                else
-                {
-                    // create new obstacle
-                    if (xloc == 1)
+                    // calculate position
+                    xloc = UnityEngine.Random.Range(1, 3);
+                    if (xloc >= 2)
                     {
-                        GameObject newEnemy = Instantiate(Worm, spawnPosition, Quaternion.identity);
-                        Debug.Log("spawned");
+                        xloc = -1;
                     }
-                    if (xloc == -1)
+                    Vector3 spawnPosition = new Vector3(transform.position.x * xloc, UnityEngine.Random.Range(yloc + .5f, targetloc.y - .5f));
+                    if (spawnPosition.y == nospawnloc.y)
                     {
-                        GameObject newEnemy = Instantiate(Worm, spawnPosition, Quaternion.Inverse(Quaternion.identity));
-                        Debug.Log("spawned");
+                        spawnPosition = new Vector3(transform.position.x, UnityEngine.Random.Range(yloc + .5f, targetloc.y - .5f));
                     }
+                    else
+                    {
+                        // create new obstacle
+                        if (xloc == 1)
+                        {
+                            GameObject newEnemy = Instantiate(Worm, spawnPosition, Quaternion.identity);
+                            Debug.Log("spawned");
+                        }
+                        if (xloc == -1)
+                        {
+                            GameObject newEnemy = Instantiate(Worm, spawnPosition, InverseRot);
+                            Debug.Log("spawned");
+                        }
+                    }
+                    countdown = 5f/Hardness;
                 }
-                countdown = 5f/Hardness;
             }
+            countdown -= Time.deltaTime;
         }
-        countdown -= Time.deltaTime;
     }
     public void Spawn()
     {
