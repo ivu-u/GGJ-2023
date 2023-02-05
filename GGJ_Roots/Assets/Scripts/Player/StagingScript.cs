@@ -31,18 +31,7 @@ public class StagingScript : MonoBehaviour
             Difficult.Hard += 1;
             level += 1;
             Debug.Log("Level change");
-            if (level == 2)
-            {
-                SceneManager.LoadScene(2);
-            }
-            if(level == 3)
-            {
-                SceneManager.LoadScene(3);
-            }
-            if(level == 4)
-            {
-                SceneManager.LoadScene(5);
-            }
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

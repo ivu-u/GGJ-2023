@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7876700991393856579}
-  - component: {fileID: -4191417685056451255}
+  - component: {fileID: 4268795253539599942}
   m_Layer: 0
-  m_Name: RockSpawner
+  m_Name: WaterSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-4191417685056451255
+--- !u!114 &4268795253539599942
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,11 +41,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2713070587638829655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da187ca2743af2b46a4d99fa241d1825, type: 3}
+  m_Script: {fileID: 11500000, guid: 01cc688c4122a8a4288d83fce1770236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   randObj: 0
-  Rock: {fileID: 5091660946191986002, guid: b69484a9e5a608942b78d60d831a1ac9, type: 3}
+  Water: {fileID: 6996107254165737939, guid: c645a095ae4db724eaaa8d5888cbf66b, type: 3}
   x: 0
   y: 0
   originpos: {x: 0, y: 0, z: 0}
@@ -54,7 +54,4 @@ MonoBehaviour:
   spawntime: 1
   yloc: 0
   xloc: 0
-  Manager: {fileID: 0}
-  Difficult: {fileID: 0}
-  Hardness: 0
   Camera: {fileID: 0}

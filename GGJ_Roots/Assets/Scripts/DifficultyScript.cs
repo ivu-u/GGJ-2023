@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DifficultyScript : MonoBehaviour
 {
-    public float Difficulty = 1f;
-    public int Hard = 1;
+    public float Difficulty;
+    public int Hard;
+    Scene scene;
     // Start is called before the first frame update
     void Awake()
     {
@@ -15,6 +17,21 @@ public class DifficultyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        scene = SceneManager.GetActiveScene();
+        if(scene.name == "Crust")
+        {
+            Difficulty = 1f;
+            Hard = 1;
+        }
+        else if(scene.name == "Mantle")
+        {
+            Difficulty = 2f;
+            Hard = 2;
+        }
+        else if(scene.name == "Core")
+        {
+            Difficulty = 3f;
+            Hard = 3;
+        }
     }
 }

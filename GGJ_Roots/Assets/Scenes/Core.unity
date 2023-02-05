@@ -303,6 +303,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Difficulty: 1
   Hard: 1
+--- !u!4 &350781723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2374009658381736483, guid: 43905e6d2e4af65468a385667ab1c21f, type: 3}
+  m_PrefabInstance: {fileID: 350781720}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &746707709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,8 +567,9 @@ MonoBehaviour:
   currentloc: {x: 0, y: 0, z: 0}
   winloc: 50
   distance: 0
-  Camera: {fileID: 0}
+  Manager: {fileID: 0}
   Difficult: {fileID: 0}
+  level: 1
 --- !u!1001 &1168762960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -688,6 +694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rocking: {fileID: 0}
   RockSpawn: {fileID: 0}
+  WaterSpawner: {fileID: 0}
+  Watering: {fileID: 0}
 --- !u!4 &1635483207 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 694075717226687587, guid: dfebaada813a33c40b4dccdbfbabcbd2, type: 3}
@@ -750,6 +758,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afdf11686b47ba04a8fb29c09d0cb3c3, type: 3}
+--- !u!1001 &1877534390
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 350781723}
+    m_Modifications:
+    - target: {fileID: 2713070587638829655, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_Name
+      value: WaterSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.083926275
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7876700991393856579, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1ce409c28094b5f4c8c56f433b136630, type: 3}
 --- !u!1 &2071916441 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5971339705584035898, guid: 7006a714ddde4e9458c3ee5f19d47059, type: 3}
@@ -769,3 +834,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rocking: {fileID: 0}
   RockSpawn: {fileID: 0}
+  WaterSpawner: {fileID: 0}
+  Watering: {fileID: 0}
