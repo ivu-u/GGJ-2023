@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good Ending
+  m_text: You Grew
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 56e4f0f721022bf4a8ca7dc301c8d5fb, type: 2}
   m_sharedMaterial: {fileID: 6179686398009434462, guid: 56e4f0f721022bf4a8ca7dc301c8d5fb, type: 2}
@@ -265,6 +265,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 933563827720402628, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1100196144714248848, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -373,9 +377,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1354736382154434205, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354736382154434205, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354736382154434205, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4539407058825108505, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199286177896179791, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199286177896179791, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199286177896179791, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199286177896179791, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a5766cb487e9b84e9d8504f7377d84a, type: 3}
