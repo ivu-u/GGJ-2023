@@ -41,7 +41,7 @@ public class RockSpawner : MonoBehaviour
         if (spawntime == 0f)
         {
             var r = new Random();
-            enemiesperspawn = UnityEngine.Random.Range(3 * Hardness, 4 * Hardness);
+            enemiesperspawn = UnityEngine.Random.Range(5, 9);
             int gap = r.Next(enemiesperspawn);
             for (int column = 0; column < enemiesperspawn; column++)
             {
