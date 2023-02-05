@@ -25,7 +25,7 @@ public class Player : MonoBehaviour     // gradient?
         }
     }
 
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentWater -= damage;
 
