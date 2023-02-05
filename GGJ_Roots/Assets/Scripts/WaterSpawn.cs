@@ -35,7 +35,7 @@ public class WaterSpawn : MonoBehaviour
         if (spawntime == 0f)
         {
             var r = new Random();
-            enemiesperspawn = UnityEngine.Random.Range(1, 3);
+            enemiesperspawn = UnityEngine.Random.Range(0, 2);
             int gap = r.Next(enemiesperspawn);
             for (int column = 0; column < enemiesperspawn; column++)
             {
