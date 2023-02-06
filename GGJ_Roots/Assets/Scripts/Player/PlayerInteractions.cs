@@ -24,7 +24,6 @@ public class PlayerInteractions : MonoBehaviour
         if(collider.gameObject.tag == "Enemy")
         {
             player.TakeDamage(20);
-            FindObjectOfType<AudioManager>().Play("RootHit");
             collider.GetComponent<ParticleSystem>().Play();
 
             StartCoroutine(waiter(collider.gameObject));
