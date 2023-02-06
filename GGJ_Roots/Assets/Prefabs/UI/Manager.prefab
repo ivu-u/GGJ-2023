@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1232751441463330191}
   - component: {fileID: 1232751441463330188}
-  - component: {fileID: 3892847375686655696}
   - component: {fileID: 1745827606628368541}
   - component: {fileID: 9006685417001679024}
   m_Layer: 0
@@ -73,64 +72,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3892847375686655696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232751441463330189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a69d15c6b8caf1c4c8fb41faa125f38d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: RootHit
-    clip: {fileID: 8300000, guid: a91b013bb339a3f49967c1dc3789ad2e, type: 3}
-    volume: 0.8
-    loop: 0
-    source: {fileID: 0}
-  - name: ButtonHover
-    clip: {fileID: 8300000, guid: 3b895712a309a7649b49b5d30980d83c, type: 3}
-    volume: 0.5
-    loop: 0
-    source: {fileID: 0}
-  - name: ButtonPress
-    clip: {fileID: 8300000, guid: 2b46c9a2c239d694f8edd42d0e6be6b9, type: 3}
-    volume: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: CrustTheme
-    clip: {fileID: 8300000, guid: f0dccd57cc4b05540aa088b4abd3a151, type: 3}
-    volume: 0.8
-    loop: 1
-    source: {fileID: 0}
-  - name: MantleTheme
-    clip: {fileID: 8300000, guid: 7daa6876e6cd3cc4c87872d4a639eb09, type: 3}
-    volume: 0.8
-    loop: 1
-    source: {fileID: 0}
-  - name: CoreTheme
-    clip: {fileID: 8300000, guid: 49b19e907a6767e46afb70571b0e7128, type: 3}
-    volume: 0.8
-    loop: 1
-    source: {fileID: 0}
-  - name: MenuTheme
-    clip: {fileID: 8300000, guid: 545df1ee801915246bb02a576a7614ca, type: 3}
-    volume: 0.8
-    loop: 1
-    source: {fileID: 0}
-  - name: something
-    clip: {fileID: 8300000, guid: a74b8a4990b079242bd8de737140c3a3, type: 3}
-    volume: 0.8
-    loop: 1
-    source: {fileID: 0}
-  - name: MoleThem
-    clip: {fileID: 8300000, guid: 76e77726766f1e448a054be08bf387d5, type: 3}
-    volume: 0.8
-    loop: 1
-    source: {fileID: 0}
 --- !u!114 &1745827606628368541
 MonoBehaviour:
   m_ObjectHideFlags: 0

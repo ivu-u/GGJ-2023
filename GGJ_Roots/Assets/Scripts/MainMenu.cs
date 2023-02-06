@@ -8,10 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     private void Awake()
     {
-		if(SceneManager.GetActiveScene().name == "TitleScreen")
-		{
-            FindObjectOfType<AudioManager>().Play("MenuTheme");
-        }
+
     }
 
     public void LoadScene(int index)
